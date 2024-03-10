@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: right; /* Align menu to the right */
+        }
+        .menu-icon {
+            display: none; /* Hide the menu icon by default */
+        }
+        .menu {
+            display: inline-block;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+        }
+        .menu a:hover {
+            background-color: #555;
+        }
+        /* Dropdown menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .dropdown a:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .menu {
+                display: none;
+            }
+            .menu-icon {
+                display: block; /* Show the menu icon on smaller screens */
+                color: #fff;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Technology Information</h1>
+        <p>Your ultimate source for the latest tech news, reviews, and tutorials.</p>
+    </header>
+    <nav>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Technology News</a>
+            <a href="#">Articles</a>
+            <a href="#">Reviews</a>
+            <a href="#">Tutorials/Guides</a>
+            <a href="#">Resources</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">...</div>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Technology News</a>
+            <a href="#">Articles</a>
+            <a href="#">Reviews</a>
+            <a href="#">Tutorials/Guides</a>
+            <a href="#">Resources</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </nav>
+    <section>
+        <h2>Latest Technology Articles</h2>
+        <!-- Article placeholders go here -->
+    </section>
+    <footer>
+        <p>&copy; 2024 Technology Information. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.style.display === "block") {
+                dropdownMenu.style.display = "none";
+            } else {
+                dropdownMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
